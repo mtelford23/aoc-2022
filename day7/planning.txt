@@ -1,0 +1,31 @@
+- "/" outermost directory
+- "$" command
+- "cd" change directory
+	- "x" move in one level
+	- ".." move out one level
+	- "/" switches to the outermost directory
+- "ls" prints all files and directories in the current directory
+	- if something printed has a number in front of a string, that means that it's a file named the string with a size of the number
+
+GOAL: find the directories with a total size of 10000 at the greatest and then sum those sizes. 
+
+- object oriented
+	- directory objects, as you traverse the given file, add into the outermost directory with the new ones
+- arrays.
+	- one array, contains other arrays that contain strings of the directory name and the files within it. 
+
+looping through input file
+if line contains "dir"
+	make new array
+	add name of dir to array
+	until the line is a command or another dir, add each line to the new array
+	if line is a command, break
+	if line is a dir, add dir to array and break
+
+find totals for each individual directory:
+new array to store the totals and the name of directories 
+
+for each in directories array:
+	add other directories to another array
+	split file strings, cast to int, add to 	array for file sizes	 
+
